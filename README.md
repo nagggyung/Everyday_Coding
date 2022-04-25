@@ -2,3 +2,4 @@
 * BaekJoon
 * Leetcode
 * Programmers 
+* Python_data_structure_lecture
