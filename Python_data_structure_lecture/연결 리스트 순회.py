@@ -19,7 +19,7 @@ class LinkedList:
             i += 1
         return curr
 
-    def traverse(self):,m 
+    def traverse(self): 
         answer = []
         curr = self.head
         while curr != None:
