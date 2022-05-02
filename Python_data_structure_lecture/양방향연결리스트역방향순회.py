@@ -20,8 +20,11 @@ class DoublyLinkedList:
 
     def reverse(self):
         result = []
+
+        # 끝에서 부터 순회 tail --> dummy node
         curr = self.tail
 
+        # dummy node가 존재하므로 curr.prev.prev != None 인 경우까지 while문으로 순회한다. 
         while curr.prev.prev:
             curr = curr.prev
             result.append(curr.data)
