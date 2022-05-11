@@ -133,6 +133,8 @@ class PriorityQueue:
         newNode = Node(x)
         curr = self.queue.head
 
+        # curr.next != self.queue.tail why? dummyNode.data = None 이기 때문에
+        # 우선순위 조건 작은 수가 우선순위가 더 높다. 
         while curr.next.data != None and x <= curr.next.data:
             curr = curr.next
             self.queue.insertAfter(curr, newNode)
