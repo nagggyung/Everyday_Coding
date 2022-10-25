@@ -9,7 +9,7 @@
 3) 둘 중에 작은 값이 조망권 확보한 세대 이다.
 '''
 
-T = int(input())
+T = 10
 for test_case in range(1, T + 1):
     n = int(input())
     buildings = list(map(int, input().split()))
@@ -38,7 +38,10 @@ for test_case in range(1, T + 1):
             temp2.append(stand)
             if max(temp2) != stand:
                 continue
-        answer += min(stand-max(left), stand-max(right))
+        max_left = 0 if len(left)==0 else max(left)
+        max_right = 0 if len(right)==0 else max(right)
+
+        answer += min(stand-max_left, stand-max_right)
 
     print(f'#{test_case} {answer}')
 
