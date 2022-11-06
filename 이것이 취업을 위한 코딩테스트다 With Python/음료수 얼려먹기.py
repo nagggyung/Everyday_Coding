@@ -1,4 +1,6 @@
 # 이것이 코딩테스트다 chap5 dfs/bfs 
+# connected block count
+# 블로그 정리
 
 def dfs(y, x):
     if y>n-1 or y<0 or x>m-1 or x<0:
