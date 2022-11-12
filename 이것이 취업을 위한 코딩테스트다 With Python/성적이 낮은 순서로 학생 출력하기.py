@@ -8,4 +8,4 @@ for _ in range(n):
 
 arr.sort(key=lambda x:x[1])
 for i in range(n):
-  print(arr[i][0], end = ' ')
+  print(arr[i][0], end = ' ')rr
