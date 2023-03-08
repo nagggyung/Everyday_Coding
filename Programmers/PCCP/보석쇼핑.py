@@ -21,10 +21,38 @@ def solution(gems):
     temp_ans.sort(key=lambda x:(x[2],x[0]))
     return temp_ans[0][:2]      
             
-   '''
-   투포인터 알고리즘
-
+   # 정답코드
+   # 딕셔너리 이용해서 문제 품
    
-
-
-   '''
+import collections
+def solution(gems):
+    answer = [0, 0]
+    l = len(set(gems))
+    contained = {}
+    shortest = len(gems)+1
+    left, right = 0, 0
+    
+    while right < len(gems):
+        if gems[right] not in contained:
+            contained[gems[right]] = 1
+        else:
+            contained[gems[right]] += 1
+        
+        if len(contained) == l:
+            while left <= right:
+                if contained[gems[left]] > 1:
+                    contained[gems[left]] -= 1
+                    left += 1
+                elif (right-left) < shortest:
+                    shortest = right-left
+                    answer = [left+1, right+1]
+                    del contained[gems[left]]
+                    left += 1
+                    break
+                else:
+                    break
+        right += 1
+    return answer
+                    
+        
+        
