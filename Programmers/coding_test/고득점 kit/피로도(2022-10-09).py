@@ -1,3 +1,10 @@
+'''
+순열: permutations -- 순서 고려 (a,b) != (b,a)
+조합: combinations -- 순서 고려 x (a,b) == (b,a)
+
+'''
+
+
 from itertools import permutations
 
 def solution(k, dungeons):
